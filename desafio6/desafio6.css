@@ -1,1 +1,57 @@
 /* Kaique Bernardes Ferreira / Yago Roberto Gomes Moraes 23/05/24 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.texto {
+    width: 200px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.texto h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.9);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.texto:hover {
+    transform: translateY(-20px);
+}
+
+.texto:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
